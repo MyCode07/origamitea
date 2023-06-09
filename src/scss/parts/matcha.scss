@@ -1,0 +1,121 @@
+.matcha {
+    // .matcha__container
+
+    &__container {
+    }
+
+    // .matcha__body
+
+    &__body {
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    // .matcha__items
+
+    &__items {
+        & > :not(:last-child) {
+            @include adaptive-value("margin-bottom", 90, 45, 1);
+        }
+    }
+
+    // .matcha__item
+
+    &__item {
+        @media (min-width: 769px) {
+            display: flex;
+        }
+
+        // .matcha__item-left
+
+        &-left {
+            @media (min-width: 769px) {
+                max-width: 430px;
+                margin-right: 3.9vw;
+            }
+
+            h3 {
+                display: flex;
+                align-items: center;
+                @include adaptive-value("font-size", 28, 20, 1);
+                margin-bottom: 0.5em;
+                font-weight: 400;
+                color: $font;
+
+                img {
+                    @include adaptive-value("width", 85, 70, 1);
+                    @include adaptive-value("margin-right", 20, 10, 1);
+                }
+            }
+
+            p {
+                @include adaptive-value("font-size", 20, 14, 1);
+                margin-bottom: 1em;
+                font-weight: 300;
+                color: $font;
+            }
+
+            label {
+                display: block;
+                @include adaptive-value("font-size", 20, 14, 1);
+                border-left: 2px solid $basic;
+                padding: 16px;
+                border-radius: 0 15px 15px 0;
+                font-weight: 300;
+            }
+
+            ol {
+                @include adaptive-value("font-size", 20, 14, 1);
+                font-weight: 300;
+
+                li {
+                }
+            }
+        }
+
+        // .matcha__item-right
+
+        &-right {
+            @media (min-width: 769px) {
+                width: 50%;
+                flex: 0 0 50%;
+            }
+
+            @media (max-width: 768px) {
+                margin-top: 30px;
+            }
+
+            iframe,
+            img {
+                display: block;
+                border-radius: 20px;
+                width: 100%;
+            }
+        }
+
+        &._reverse {
+            flex-direction: row-reverse;
+
+            .matcha__item-left {
+                margin-right: 0;
+                margin-left: 3.9vw;
+            }
+        }
+    }
+
+    .important {
+        h4 {
+            @include adaptive-value("font-size", 28, 16, 1);
+            font-weight: 400;
+            max-width: 500px
+        }
+
+        p {
+            @include adaptive-value("font-size", 20, 14, 1);
+            font-weight: 300;
+            max-width: 455px;
+        }
+    }
+}

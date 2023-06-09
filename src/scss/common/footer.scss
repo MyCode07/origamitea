@@ -5,16 +5,6 @@
 .footer {
     @include adaptive-value("margin-top", 120, 80, 1);
 
-    background-color: $gray;
-    border-radius: 30px;
-    padding-top: 55px;
-    padding-bottom: 36px;
-
-    @media (max-width: 1470px) {
-        padding-inline: 0;
-        max-width: calc(100% - 30px);
-    }
-
     @media (max-width: 768px) {
         padding-top: 42px;
         padding-bottom: 24px;
@@ -32,6 +22,15 @@
     // .footer__body
 
     &__body {
+        background-color: $gray;
+        border-radius: 30px;
+        padding-top: 55px;
+        padding-bottom: 36px;
+    }
+
+    // .footer-inner__container
+
+    &-inner__container {
     }
 
     // .footer__top
@@ -108,7 +107,8 @@
                 margin-right: 13px;
             }
 
-            img {
+            img,
+            svg {
                 max-width: 41px;
             }
         }

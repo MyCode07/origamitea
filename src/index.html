@@ -4,6 +4,333 @@
 @@include('./html/header.html')
 
 <main>
+    <section class="hero">
+        <div class="hero__container _container-big">
+            <div class="hero__body">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="background" loading="lazy" src="img/1x1.png" srcset="img/hero.png" alt="">
+                            <img class="logo" src="img/logo-circle.svg" alt="">
+                            <div>
+                                <h1>ИНТЕРНЕТ-МАГАЗИН ЯПОНСКОГО ЧАЯ И МАТЧА ORIGAMI</h1>
+                                <p>Здесь самые вкусные премиальные японские чаи и матча. 100 % натуральные, свежие, а
+                                    значит, полезные. </p>
+                                @@include('./html/main-btn.html', {"text":"Купить матча","class":""})
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="background" loading="lazy" src="img/1x1.png" srcset="img/hero.png" alt="">
+                            <img class="logo" src="img/logo-circle.svg" alt="">
+                            <div>
+                                <h2>ИНТЕРНЕТ-МАГАЗИН ЯПОНСКОГО ЧАЯ И МАТЧА ORIGAMI</h2>
+                                <p>Здесь самые вкусные премиальные японские чаи и матча. 100 % натуральные, свежие, а
+                                    значит, полезные. </p>
+                                @@include('./html/main-btn.html', {"text":"Купить матча","class":""})
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="background" loading="lazy" src="img/1x1.png" srcset="img/hero.png" alt="">
+                            <img class="logo" src="img/logo-circle.svg" alt="">
+                            <div>
+                                <h2>ИНТЕРНЕТ-МАГАЗИН ЯПОНСКОГО ЧАЯ И МАТЧА ORIGAMI</h2>
+                                <p>Здесь самые вкусные премиальные японские чаи и матча. 100 % натуральные, свежие, а
+                                    значит, полезные. </p>
+                                @@include('./html/main-btn.html', {"text":"Купить матча","class":""})
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/products-grid.html', {"title":"<span>Хиты</span> продаж"})
+
+    <section class="advantages">
+        <div class="advantages__container _container">
+            <div class="advantages__body">
+                <div class="_section-top">
+                    <img src="img/logo.svg" alt="">
+                    <h2>японский чай и матча <label>ORIGAMI</label> – <span>лучшая альтернатива</span> кофе</h2>
+                    <p>
+                        <img src="img/vitaliy.png" alt="">
+                        Основатель компании — <br>
+                        чайный эксперт с 19-летним опытом <br>
+                        Виталий Романов
+                    </p>
+                </div>
+                <ol>
+                    <li>
+                        <span>15+</span>
+                        <label>Видов японского чая и матча</label>
+                    </li>
+                    <li>
+                        <span>25+</span>
+                        <label>Видов японского листового чая</label>
+                    </li>
+                    <li>
+                        <span>50+</span>
+                        <label>Моделей японской чайной посуды и аксессуаров</label>
+                    </li>
+                    <li>
+                        <span>19</span>
+                        <label>Лет экспертизы на рынке</label>
+                    </li>
+                    <li>
+                        <span>40+</span>
+                        <label>Видов японского чая из 1000 образцов</label>
+                    </li>
+                    <li>
+                        <span>30</span>
+                        <label>Дней между поставками</label>
+                    </li>
+                    <li>
+                        <span>7</span>
+                        <label>Лет прямых поставок из Японии</label>
+                    </li>
+                    <li>
+                        <span>300</span>
+                        <label>Полезных веществ в каждом грамме</label>
+                    </li>
+                </ol>
+                @@include('./html/main-btn.html', {"text":"Перейт и в каталог","class":"_section-btn"})
+            </div>
+        </div>
+    </section>
+
+    <section class="unique">
+        <div class="unique__container _container">
+            <div class="unique__body">
+                <div class="_section-top">
+                    <span class="lines">Преимущества</span>
+                    <h2>Японский чай матча – <span><br>уникальный</span> напиток</h2>
+                    <p>
+                        Бодрит, расслабляет и оздоравливает одновременно
+                    </p>
+                </div>
+                <div class="unique__items">
+                    <div class="unique__items-group">
+                        <div class="unique__item">
+                            <span>
+                                <svg>
+                                    <use xlink:href="img/svg/icons.svg#rabotasbosobnost" />
+                                </svg>
+                            </span>
+                            <label>Для работоспособности</label>
+                            <ol class="_marker">
+                                <li>дарит энергию и выносливость</li>
+                                <li>стимулирует память и внимание</li>
+                            </ol>
+                        </div>
+                        <div class="unique__item">
+                            <span>
+                                <svg>
+                                    <use xlink:href="img/svg/icons.svg#meditaciya" />
+                                </svg>
+                            </span>
+                            <label>Для медитации и творчества</label>
+                            <ol class="_marker">
+                                <li>даёт расслабление и радость</li>
+                                <li>повышает концентрацию внимания</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <img class="unique__items-iamge" src="img/unique.png" alt="">
+
+                    <div class="unique__items-group">
+                        <div class="unique__item">
+                            <span>
+                                <svg>
+                                    <use xlink:href="img/svg/icons.svg#molodost" />
+                                </svg>
+                            </span>
+                            <label>Для молодости</label>
+                            <ol class="_marker">
+                                <li>настраивает иммунную систему</li>
+                                <li>нормализует уровень сахара в крови</li>
+                                <li>снижает уровень  холестерина</li>
+                            </ol>
+                        </div>
+                        <div class="unique__item">
+                            <span>
+                                <svg>
+                                    <use xlink:href="img/svg/icons.svg#zdarovya" />
+                                </svg>
+                            </span>
+                            <label>Для здоровья и красоты</label>
+                            <ol class="_marker">
+                                <li>ускоряет метаболизм</li>
+                                <li>помогает сжигать жиры</li>
+                                <li>очищает организм</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                @@include('./html/main-btn.html', {"text":"Купить матча","class":"_section-btn"})
+            </div>
+        </div>
+    </section>
+
+    <section class="matcha">
+        <div class="matcha__container _container">
+            <div class="matcha__body">
+                <div class="_section-top">
+                    <h2>Что такое <span>матча?</span></h2>
+                </div>
+
+                <div class="matcha__items">
+                    <div class="matcha__item">
+                        <div class="matcha__item-left">
+                            <h3>
+                                <img src="img/vitaliy.png" alt="">
+                                В Японии Виталий
+                                выяснил ...
+                            </h3>
+                            <p>Во второй половине 12 века дзен-буддийский монах Эйсай привёз матча в Японию. Этот
+                                напиток помогал монахам
+                                сконцентрироваться во время медитаций.  </p>
+
+                            <label>
+                                Матча – зелёный порошковый чай,  в дословном переводе с японского – “перетёртые
+                                листья
+                                чая” 
+                            </label>
+                        </div>
+                        <div class="matcha__item-right">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/RuUS2ojDRMI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="matcha__item _reverse">
+                        <div class="matcha__item-left">
+                            <h3>Только в  Японии </h3>
+                            <p>Соблюдают технологию, отточенную веками</p>
+                            <ol class="_marker">
+                                <li>За три недели до сбора урожая затеняют кусты</li>
+                                <li>Собирают верхние листочки</li>
+                                <li>Сырьё  пропаривают после сбора, очищают от прожилок и упаковывают для хранения
+                                </li>
+                                <li>Перед продажей перетирают на каменных жерновах до состояния пудры</li>
+                            </ol>
+                        </div>
+                        <div class="matcha__item-right">
+                            <img src="img/in-japan.png" alt="">
+                        </div>
+                    </div>
+                    <div class="matcha__item">
+                        <div class="matcha__item-left">
+                            <h3>Сохраняют натуральный вкус,
+                                цвет и пользу чая</h3>
+                            <p>300 биологически активных компонентов «запечатано» в каждом листочке</p>
+                            <ol class="_marker">
+                                Настоящий чай матча:
+                                <li>Вкус – благородный, сливочный с оттенками лесных ягод, цветов и фруктов</li>
+                                <li>Аромат – шоколада, печенья, бисквита, фруктов, цветов и орехов</li>
+                                <li>Цвет – яркий, изумрудно-зелёный</li>
+                            </ol>
+                        </div>
+                        <div class="matcha__item-right">
+                            <img src="img/natural.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="important">
+                    <label>
+                        <svg>
+                            <use xlink:href="img/svg/icons.svg#important" />
+                        </svg>
+                        Важно
+                    </label>
+
+                    <h4>Секреты транспортировки, хранения и упаковки японского чая и матча</h4>
+                    <p>Только в ORIGAMI делают всё, чтобы чай был действительно свежим, а, значит, полезным и вкусным  
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/products-grid.html', {"title":"Товары <span>матча</span>"})
+
+    <section class="useful">
+        <div class="useful__container _container">
+            <div class="useful__body">
+                <div class="_section-top">
+                    <h2>Чем <span>полезен</span> чай матча?</h2>
+                </div>
+                <div class="useful__items">
+                    <div class="useful__item">
+                        <h3><span>01</span> Кофеин</h3>
+                        <p>Тонизирующее средство</p>
+                        <img src="img/useful-kofein.svg" alt="">
+                        <ol>
+                            <li>Повышает уровень энергии</li>
+                            <li>Даёт бодрость</li>
+                            <li>Улучшает работу мозга</li>
+                            <li>Повышает работоспособность</li>
+                            <li>Способствует похудению</li>
+                        </ol>
+                        <div class="tanin">
+                            <img src="img/useful-tanin.svg" alt="">
+                            <span>
+                                <span>+ Танины</span>
+                                <label>смягчают и продлевают действие кофеина</label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="useful__item">
+                        <h3><span>02</span>Катехины</h3>
+                        <p>Мощные антиоксиданты</p>
+                        <img src="img/useful-katehin.svg" alt="">
+                        <ol>
+                            <li>Очищают организм</li>
+                            <li>Выводят свободные радикалы</li>
+                            <li>Улучшают пищеварение</li>
+                            <li>Контролируют уровень сахара и холестерина</li>
+                            <li>Укрепляют иммунитет</li>
+                            <li>Замедляют старение</li>
+                            <li>Омолаживают кожу</li>
+                        </ol>
+                    </div>
+                    <div class="useful__item">
+                        <h3><span>03</span>L-теанин</h3>
+                        <p>Нейромедиатор</p>
+                        <img src="img/useful-teanin.svg" alt="">
+                        <ol>
+                            <li>Способствует выработке дофамина и серотонина</li>
+                            <li>Снимает стресс </li>
+                            <li>Повышает работоспособность</li>
+                            <li>Расслабляет</li>
+                            <li>Укрепляет иммунитет</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="useful__superfood">
+                    <div class="useful__superfood-matcha">
+                        <span>МАТЧА</span>
+                    </div>
+                    <div class="useful__superfood-content">
+                        <h4>Суперфуд для наполненной жизни со вкусом и заботой о себе</h4>
+                        <p>1 чашка матча<br>
+                            =<br>
+                            10 чашек зелёного чая</p>
+                        @@include('./html/main-btn.html', {"text":"Купить матча","class":"_section-btn"})
+                    </div>
+                    <div class="useful__superfood-tea">
+                        <span>ЗЕЛЁНЫЙ<br>ЧАЙ</span>
+                        <img src="img/superfood-circles.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 </main>

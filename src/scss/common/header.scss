@@ -1,4 +1,6 @@
 .header {
+    overflow: hidden;
+
     // .header__container
 
     &__container {
@@ -320,6 +322,7 @@
             &-img {
                 position: relative;
                 svg {
+                    max-width: 18px;
                     height: 18px;
                     margin-right: 8px;
                     fill: currentColor;
@@ -439,6 +442,10 @@
 
     &-cart {
         white-space: nowrap;
+
+        @media (min-width: 769px) {
+            margin-right: 0 !important;
+        }
     }
 
     // .header__burger
@@ -451,6 +458,7 @@
         display: block;
 
         svg {
+            height: 20px;
             width: 20px;
             pointer-events: none;
             stroke: $font;

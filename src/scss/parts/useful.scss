@@ -1,0 +1,248 @@
+.useful {
+    // .useful__container
+
+    &__container {
+    }
+
+    // .useful__body
+
+    &__body {
+    }
+
+    // .useful__items
+
+    &__items {
+        @media (min-width: 769px) {
+            display: flex;
+            justify-content: space-between;
+
+            & > :not(:last-child) {
+                margin-right: 5vw;
+            }
+        }
+
+        @media (max-width: 768px) {
+            & > :not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    // .useful__item
+
+    &__item {
+        @media (min-width: 769px) {
+            max-width: 330px;
+        }
+
+        h3 {
+            @include adaptive-value("font-size", 28, 20, 1);
+            margin-bottom: 8px;
+            color: $font;
+
+            span {
+                display: block;
+                @include adaptive-value("font-size", 18, 14, 1);
+                font-weight: 300;
+                color: rgba($color: $font, $alpha: 0.5);
+
+                margin-bottom: 1em;
+            }
+        }
+
+        p {
+            @include adaptive-value("font-size", 16, 14, 1);
+            font-weight: 300;
+            color: rgba($color: $font, $alpha: 0.7);
+            @include adaptive-value("margin-bottom", 40, 24, 1);
+        }
+
+        img {
+            @include adaptive-value("width", 225, 150, 1);
+            @include adaptive-value("height", 225, 150, 1);
+            @include adaptive-value("margin-bottom", 40, 24, 1);
+        }
+
+        ol {
+            & > :not(:last-child) {
+                margin-bottom: 1.1em;
+            }
+
+            li {
+                @include adaptive-value("font-size", 18, 16, 1);
+                color: $font;
+                display: flex;
+                align-items: center;
+                font-weight: 300;
+
+                &:before {
+                    content: "+";
+                    width: 1.4em;
+                    height: 1.4em;
+                    flex: 0 0 1.4em;
+                    margin-right: 8px;
+
+                    background-color: $accent;
+                    border-radius: 50%;
+                    color: $white;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    text-align: center;
+                }
+            }
+        }
+        .tanin {
+            @include adaptive-value("margin-top", 40, 24, 1);
+
+            padding: 22px 22px 18px 18px;
+            background-color: $basic;
+            border-radius: 20px;
+
+            display: flex;
+            align-items: center;
+
+            img {
+                stroke: rgba($color: $white, $alpha: 0.5);
+
+                width: 68px;
+                height: 68px;
+                flex: 0 0 68px;
+                margin-right: 16px;
+                margin-bottom: 0 !important;
+            }
+
+            span {
+                display: block;
+                font-size: 20px;
+                margin-bottom: 8px;
+                color: $white;
+
+                @include adaptive-value("font-size", 20, 18, 1);
+
+                label {
+                    display: block;
+                    @include adaptive-value("font-size", 18, 14, 1);
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    // .useful__superfood
+
+    &__superfood {
+        @include adaptive-value("margin-top", 60, 36, 1);
+        background-color: $gray;
+        border-radius: 32px;
+        overflow: hidden;
+        position: relative;
+
+        padding: 56px 15px 46px 15px;
+
+        @media (max-width: 768px) {
+            padding: 168px 15px 208px 15px;
+        }
+
+        &-matcha,
+        &-tea {
+            position: absolute;
+            width: 34.483%;
+            padding-bottom: 34.483%;
+
+            @media (max-width: 768px) {
+                width: 258px;
+                padding-bottom: 258px;
+            }
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 50%;
+            @include adaptive-value("font-size", 28, 20, 1);
+
+            span {
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font: inherit;
+            }
+        }
+
+        // .useful__superfood-matcha
+
+        &-matcha {
+            left: -80px;
+            top: -85px;
+
+            @media (max-width: 768px) {
+                left: -65px;
+                top: -103px;
+
+                span {
+                    @media (max-width: 768px) {
+                        transform: translate(-50%, 50%);
+                    }
+                }
+            }
+
+            color: $white;
+            background-color: $accent;
+        }
+
+        // .useful__superfood-content
+
+        &-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h4 {
+                @include adaptive-value("font-size", 28, 20, 1);
+                color: $font;
+                @include adaptive-value("margin-bottom", 60, 30, 1);
+                max-width: 470px;
+
+                @media (max-width: 1024px) {
+                    max-width: 400px;
+                }
+            }
+
+            p {
+                @include adaptive-value("font-size", 20, 14, 1);
+                color: $font;
+                font-weight: 300;
+            }
+
+            ._main-btn {
+            }
+        }
+
+        // .useful__superfood-tea
+
+        &-tea {
+            bottom: -73px;
+            right: -62px;
+            color: $font;
+
+            @media (max-width: 768px) {
+                right: -67px;
+                bottom: -87px;
+            }
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

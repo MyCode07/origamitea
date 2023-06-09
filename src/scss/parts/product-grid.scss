@@ -1,0 +1,307 @@
+.products-grid {
+    // .products-grid__container
+
+    &__container {
+    }
+
+    // .products-grid__body
+
+    &__body {
+    }
+
+    // .products-grid__gird
+
+    &__grid {
+        @media (max-width: 1024px) {
+            overflow-x: auto;
+
+            width: 100vw;
+            margin-left: -15px;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    // .products-grid__items
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 26px;
+
+        @media (max-width: 1024px) {
+            display: flex;
+            gap: 0;
+            padding: 0 15px;
+
+            & > :not(:last-child) {
+                margin-right: 25px;
+            }
+
+            width: fit-content;
+        }
+    }
+}
+
+.product-item {
+    background-color: $gray;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px 13px;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        min-width: 221px;
+        flex: 1 1 auto;
+
+        padding: 15px 11px;
+    }
+
+    // .product-item__top
+
+    &__top {
+        margin-bottom: 15px;
+        position: relative;
+
+        ul {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+
+            & > :not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            & > :not(:first-child) {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    li {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+            }
+
+            li {
+                transition: all 0.3s ease 0s;
+            }
+
+            a {
+                width: 42px;
+                height: 42px;
+                background-color: $white;
+                border-radius: 50%;
+
+                @media (max-width: 1024px) {
+                    width: 34px;
+                    height: 34px;
+                }
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            svg {
+                width: 17px;
+                fill: $accent;
+
+                @media (max-width: 1024px) {
+                    width: 14px;
+                }
+            }
+        }
+    }
+
+    // .product-item__labels
+
+    &__labels {
+        position: absolute;
+        top: 0;
+
+        & > :not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        label {
+            border-radius: 100px;
+            text-transform: uppercase;
+            color: $white;
+            display: block;
+
+            padding: 0.5em 1em;
+            @include adaptive-value("font-size", 14, 10, 1);
+        }
+
+        .hit {
+            background-color: $font;
+        }
+
+        .sele {
+            background-color: $basic;
+        }
+    }
+
+    // .product-item__image
+
+    &__image {
+        display: block;
+        position: relative;
+        padding-bottom: 100%;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    // .product-item__info
+
+    &__info {
+    }
+
+    h3 {
+        color: $font;
+        font-weight: 300;
+
+        margin-bottom: 1.5em;
+        @include adaptive-value("font-size", 16, 13, 1);
+    }
+
+    // .product-item__price
+
+    &__price {
+        color: $font;
+        display: block;
+
+        margin-bottom: 0.6em;
+        @include adaptive-value("font-size", 20, 16, 1);
+
+        del {
+            margin-right: 0.5em;
+            color: $white;
+
+            span {
+                color: $font;
+            }
+        }
+
+        ins {
+            text-decoration: none;
+        }
+    }
+
+    // .product-item__bottom
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .quantity {
+        display: flex;
+        align-items: center;
+    }
+
+    .minus,
+    .plus {
+        flex: 0 0 9px;
+        width: 9px;
+        height: 1em;
+        font-weight: 500;
+        color: $font;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        cursor: pointer;
+
+        @include adaptive-value("font-size", 16, 13, 1);
+
+        @media (max-width: 1024px) {
+            width: 7px;
+            flex: 0 0 7px;
+        }
+    }
+
+    .qty {
+        width: 48px;
+        height: 48px;
+        flex: 0 0 48px;
+        border: 1px solid #e1e1e1;
+        border-radius: 50%;
+        margin: 0 8px;
+        color: $font;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        @include adaptive-value("font-size", 16, 13, 1);
+
+        @media (max-width: 1024px) {
+            width: 39px;
+            height: 39px;
+            flex: 0 0 39px;
+            margin: 0 6px;
+        }
+    }
+
+    .plus {
+    }
+
+    .add-to-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        max-width: 150px;
+        margin-right: 10px;
+        padding: 14px 5px;
+        color: $white;
+        text-align: center;
+        background-color: $accent;
+        border-radius: 100px;
+
+        @media (max-width: 1024px) {
+            padding: 12px;
+        }
+
+        @include adaptive-value("font-size", 16, 13, 1);
+
+        svg {
+            flex: 0 0 18px;
+            width: 18px;
+            margin-right: 8px;
+            fill: currentColor;
+        }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+}
