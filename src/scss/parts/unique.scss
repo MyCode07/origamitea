@@ -83,14 +83,14 @@
             display: block;
             margin-top: 0.9em;
             margin-bottom: 8px;
-            color: $font;
+            
 
             @include adaptive-value("font-size", 28, 16, 1);
         }
 
         ol {
             li {
-                color: $font;
+                
                 font-weight: 300;
 
                 @include adaptive-value("font-size", 20, 12, 1);

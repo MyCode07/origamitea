@@ -59,7 +59,7 @@
         border-bottom: 1px solid $gray;
 
         span {
-            color: $font;
+            
             text-transform: uppercase;
             font-size: 20px;
         }
@@ -97,7 +97,7 @@
             }
 
             a {
-                color: $font;
+                
 
                 &:not(.remove) {
                     display: flex;
@@ -151,7 +151,7 @@
         padding-bottom: 15px;
 
         strong {
-            color: $font;
+            
             font-size: 18px;
             text-transform: uppercase;
         }
@@ -168,7 +168,7 @@
             display: block;
             font-size: 14px;
             text-transform: uppercase;
-            color: $font;
+            
             padding: 12px 20px;
             border-radius: 10px;
             text-align: center;

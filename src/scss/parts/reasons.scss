@@ -36,7 +36,7 @@
             span {
                 display: block;
                 @include adaptive-value("font-size", 20, 14, 1);
-                color: $font;
+                
                 margin-bottom: 0.4em;
                 text-transform: none;
                 font-weight: 300;
@@ -57,7 +57,7 @@
     &__flex {
         & > :first-child {
             background-color: $gray;
-            color: $font;
+            
         }
 
         & > :nth-child(2) {
@@ -109,7 +109,7 @@
     &__bottom-title {
         @include adaptive-value("font-size", 28, 20, 1);
         text-align: center;
-        color: $font;
+        
 
         margin-bottom: 1em;
         margin-top: 40px;

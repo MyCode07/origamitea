@@ -12,3 +12,4 @@ import './utils/sliders.js';
 // import './utils/forms.js';
 // import './utils/accordeon.js';
 import './utils/replace.js';
+import './utils/tabs.js';

@@ -42,7 +42,6 @@
                 @include adaptive-value("font-size", 28, 20, 1);
                 margin-bottom: 0.5em;
                 font-weight: 400;
-                color: $font;
 
                 img {
                     @include adaptive-value("width", 85, 70, 1);
@@ -54,7 +53,6 @@
                 @include adaptive-value("font-size", 20, 14, 1);
                 margin-bottom: 1em;
                 font-weight: 300;
-                color: $font;
             }
 
             label {
@@ -109,7 +107,7 @@
         h4 {
             @include adaptive-value("font-size", 28, 16, 1);
             font-weight: 400;
-            max-width: 500px
+            max-width: 500px;
         }
 
         p {

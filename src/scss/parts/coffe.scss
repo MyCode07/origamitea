@@ -1,0 +1,185 @@
+.coffe {
+    // .coffe__container
+
+    &__container {
+    }
+
+    // .coffe__body
+
+    &__body {
+        @media (max-width: 1024px) {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+    }
+
+    // .coffe__tabs
+
+    &__tabs {
+        display: flex;
+        align-items: stretch;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        background-color: $gray;
+
+        @include adaptive-value("margin-bottom", 30, 24, 1);
+
+        &:before {
+            position: absolute;
+            content: "";
+            left: 3px;
+            top: 3px;
+            height: calc(100% - 6px);
+            width: 50%;
+            background-color: $white;
+            border-radius: 13px;
+            z-index: 1;
+            transition: all 0.3s ease 0s;
+        }
+
+        &._right {
+            &:before {
+                left: calc(50% - 3px);
+            }
+        }
+
+        button {
+            width: 50%;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            background-color: unset;
+
+            @include adaptive-value("font-size", 16, 12, 1);
+            @include adaptive-value("height", 45, 41, 1);
+        }
+
+        // .coffe__tabs-content
+
+        &-content {
+            overflow: hidden;
+
+            // .coffe__tabs-content-wrapper
+
+            &-wrapper {
+                display: flex;
+                transition: all 0.3s ease 0s;
+
+                & > :not(:last-child) {
+                    margin-right: 25px;
+                }
+
+                &._right {
+                    transform: translate(calc(-100% - 25px), 0);
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        flex: 0 0 100%;
+
+        // .tab-content__top
+
+        &__top {
+            h3 {
+                @include adaptive-value("font-size", 28, 20, 1);
+                @include adaptive-value("margin-bottom", 8, 12, 1);
+            }
+
+            div {
+                @media (min-width: 601px) {
+                    display: flex;
+                    align-items: flex-end;
+
+                    & > :not(:last-child) {
+                        margin-right: 40px;
+                    }
+                }
+
+                p {
+                    @include adaptive-value("font-size", 20, 14, 1);
+                    font-weight: 300;
+
+                    @media (min-width: 1025px) {
+                        flex: 0 0 43.15%;
+                    }
+                }
+            }
+        }
+
+        // .tab-content__bottom
+
+        &__bottom {
+            @include adaptive-value("margin-top", 36, 20, 1);
+
+            @media (min-width: 1025px) {
+                display: flex;
+                align-items: center;
+            }
+
+            .iframe {
+                margin-right: 40px;
+                padding-bottom: 25.75%;
+                position: relative;
+                width: 100%;
+
+                @media (min-width: 1025px) {
+                    flex: 0 0 43.15%;
+                }
+
+                @media (max-width: 1024px) {
+                    padding-bottom: 45.385%;
+                    margin-bottom: 36px;
+                }
+
+                @media (max-width: 768px) {
+                    padding-bottom: 55.76%;
+                }
+
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    display: block;
+                    border-radius: 20px;
+                }
+            }
+
+            ol {
+                @media (min-width: 601px) {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 30px 20px;
+                }
+
+                @media (max-width: 600px) {
+                    & > :not(:last-child) {
+                        margin-bottom: 14px;
+                    }
+                }
+
+                li {
+                    display: flex;
+                    align-items: center;
+
+                    @include adaptive-value("font-size", 16, 14, 1);
+                    font-weight: 300;
+
+                    padding: 16px 16px 16px 10px;
+                    background-color: $gray;
+                    border-radius: 20px;
+
+                    img,
+                    svg {
+                        width: 60px;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

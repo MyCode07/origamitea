@@ -54,13 +54,11 @@
 
                 h1,
                 h2 {
-                    color: $font;
                     max-width: 790px;
                     @include adaptive-value("font-size", 55, 28, 1);
                 }
 
                 p {
-                    color: $font;
                     font-weight: 300;
                     margin: 1.25em 0;
                     max-width: 475px;

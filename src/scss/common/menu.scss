@@ -73,7 +73,7 @@
             li {
                 a {
                     font-size: 20px;
-                    color: $font;
+                    
                 }
 
                 &:has(ul) {
@@ -133,7 +133,7 @@
 
         &-link {
             font-size: 20px;
-            color: $font;
+            
             display: block;
 
             &:not(:last-of-type) {
@@ -144,7 +144,7 @@
         span {
             display: block;
             text-transform: uppercase;
-            color: $font;
+            
             font-size: 20px;
 
             margin-bottom: 16px;
