@@ -1,0 +1,121 @@
+.reasons {
+    // .reasons__container
+
+    &__container {
+    }
+
+    // .reasons__body
+
+    &__body {
+    }
+
+    // .reasons__image
+
+    &__image {
+        position: relative;
+        margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            position: absolute;
+            right: 66px;
+            top: 31px;
+
+            @include adaptive-value("font-size", 36, 18, 1);
+            color: $accent;
+            text-transform: uppercase;
+
+            @media (max-width: 768px) {
+                right: 15px;
+                top: 22px;
+            }
+
+            span {
+                display: block;
+                @include adaptive-value("font-size", 20, 14, 1);
+                color: $font;
+                margin-bottom: 0.4em;
+                text-transform: none;
+                font-weight: 300;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    // .reasons__flex
+
+    &__flex {
+        & > :first-child {
+            background-color: $gray;
+            color: $font;
+        }
+
+        & > :nth-child(2) {
+            background-color: $basic;
+            color: $white;
+        }
+
+        @media (min-width: 769px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            & > :not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+
+        // .reasons__flex-item
+
+        &-item {
+            @media (min-width: 769px) {
+                width: calc(50% - 20px);
+            }
+
+            padding: 32px 56px 44px 32px;
+            border-radius: 20px;
+
+            @media (max-width: 768px) {
+                padding: 24px 24px 28px 24px;
+            }
+
+            h4 {
+                @include adaptive-value("font-size", 28, 20, 1);
+                margin-bottom: 0.75em;
+            }
+
+            ol {
+                li {
+                    font-weight: 300;
+                    @include adaptive-value("font-size", 20, 14, 1);
+                }
+            }
+        }
+    }
+
+    // .reasons__bottom-title
+
+    &__bottom-title {
+        @include adaptive-value("font-size", 28, 20, 1);
+        text-align: center;
+        color: $font;
+
+        margin-bottom: 1em;
+        margin-top: 40px;
+    }
+
+    ._main-btn {
+        margin-top: 0 !important;
+    }
+}
