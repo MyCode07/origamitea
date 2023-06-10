@@ -130,6 +130,11 @@
                 bottom: 0;
                 position: relative;
             }
+
+            @media (max-width:475px){
+                width: calc(100% + 70px);
+                margin-left: -35px;
+            }
         }
     }
 }

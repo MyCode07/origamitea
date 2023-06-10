@@ -21,8 +21,9 @@
             color: $white;
             position: absolute;
             z-index: 1;
-            left: 35px;
-            bottom: 29px;
+
+            @include adaptive-value("left", 35, 23, 1);
+            @include adaptive-value("bottom", 29, 23, 1);
         }
 
         img {

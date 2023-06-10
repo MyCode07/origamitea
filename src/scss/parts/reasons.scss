@@ -24,9 +24,9 @@
             right: 66px;
             top: 31px;
 
-            @include adaptive-value("font-size", 36, 18, 1);
-            color: $accent;
-            text-transform: uppercase;
+            @include adaptive-value("font-size", 20, 14, 1);
+            font-weight: 300;
+            color: $font;
 
             @media (max-width: 768px) {
                 right: 15px;
@@ -35,14 +35,16 @@
 
             span {
                 display: block;
-                @include adaptive-value("font-size", 20, 14, 1);
-                
-                margin-bottom: 0.4em;
+                @include adaptive-value("font-size", 36, 18, 1);
+                margin-top: 0.25em;
+                margin-left: 1.3em;
                 text-transform: none;
-                font-weight: 300;
+                text-transform: uppercase;
+                font-weight: 400;
+                color: $accent;
 
                 @media (max-width: 768px) {
-                    margin-bottom: 4px;
+                    margin-top: 4px;
                 }
             }
         }
@@ -57,7 +59,6 @@
     &__flex {
         & > :first-child {
             background-color: $gray;
-            
         }
 
         & > :nth-child(2) {
@@ -109,7 +110,6 @@
     &__bottom-title {
         @include adaptive-value("font-size", 28, 20, 1);
         text-align: center;
-        
 
         margin-bottom: 1em;
         margin-top: 40px;
