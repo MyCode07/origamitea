@@ -1,0 +1,126 @@
+.quality {
+    // .quality__container
+
+    &__container {
+    }
+
+    // .quality__body
+
+    &__body {
+    }
+
+    ._section-top {
+        @media (min-width: 769px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        p {
+            margin-top: 0;
+            max-width: 500px;
+            margin-left: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            background-color: $gray;
+            border-radius: 20px;
+            padding: 24px 34px 24px 20px;
+
+            text-align: left;
+            @include adaptive-value("font-size", 20, 14, 1);
+
+            @media (max-width: 768px) {
+                margin-left: 0;
+                margin-top: 36px;
+                padding: 16px 21px 16px 14px;
+            }
+
+            img {
+                @include adaptive-value("width", 85, 70, 1);
+                flex: 0 0 auto;
+                z-index: 1;
+                position: relative;
+            }
+
+            span {
+                @include adaptive-value("width", 85, 70, 1);
+                @include adaptive-value("height", 85, 70, 1);
+                flex: 0 0 auto;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                color: $white;
+                @include adaptive-value("font-size", 62, 43, 1);
+                margin-left: -0.5em;
+                margin-right: 16px;
+                z-index: 0;
+                position: relative;
+
+                border-radius: 50%;
+                background-color: $accent;
+            }
+        }
+    }
+
+    ol {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            gap: 20px;
+        }
+
+        @media (max-width: 475px) {
+            display: block;
+            gap: 0;
+
+            & > :not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            background-color: $gray;
+
+            @include adaptive-value("padding", 12, 8, 1);
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+                flex: 1 1 auto;
+            }
+
+            p {
+                @include adaptive-value("font-size", 20, 14, 1);
+                padding: 1.2em 0.6em 0.6em 0.6em;
+
+                span {
+                    margin-bottom: 4px;
+                    font-weight: 300;
+                    display: block;
+                }
+
+                label {
+                    display: block;
+                    @include adaptive-value("font-size", 28, 20, 1);
+                }
+            }
+        }
+    }
+}

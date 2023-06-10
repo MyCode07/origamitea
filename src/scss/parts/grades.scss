@@ -1,0 +1,150 @@
+.grades {
+    // .grades__container
+
+    &__container {
+    }
+
+    // .grades__body
+
+    &__body {
+    }
+
+    // .grades__table
+
+    &__table {
+        @media (max-width: 1024px) {
+            overflow-x: auto;
+            width: 100vw;
+            margin-left: -15px;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    table {
+        @media (max-width: 1024px) {
+            padding-inline: 15px;
+            width: fit-content;
+        }
+
+        p {
+            @include adaptive-value("font-size", 20, 14, 1);
+            font-weight: 300;
+        }
+
+        tr {
+            display: grid;
+            grid-template-columns: 160px repeat(3, minmax(260px, 1fr));
+
+            & > :not(:last-child) {
+                border-right: 1px solid #d6d6d6;
+            }
+
+            @media (max-width: 600px) {
+                grid-template-columns: 105px repeat(3, minmax(190px, 1fr));
+            }
+        }
+
+        td {
+            padding: 18px;
+            width: 100%;
+        }
+
+        thead {
+            tr {
+                td {
+                    p {
+                        padding-top: 0.5em;
+                        padding-bottom: 0.5em;
+                    }
+                }
+            }
+        }
+
+        thead tr p,
+        tbody tr > :first-child p {
+            @include adaptive-value("font-size", 28, 14, 1);
+            font-weight: 400;
+        }
+
+        tbody {
+            & > :first-child {
+                & > :not(:first-child) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            }
+
+            tr {
+                & > :first-child {
+                    display: flex;
+                    align-items: center;
+                }
+
+                border-top: 1px solid #d6d6d6;
+
+                td {
+                    img {
+                        width: 100%;
+                        border-radius: 20px;
+                        margin-top: 24px;
+                    }
+
+                    svg {
+                        width: 1em;
+                        height: 1em;
+                        margin-right: 8px;
+                        fill: currentColor;
+                    }
+
+                    span {
+                        color: $white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        @include adaptive-value("font-size", 16, 14, 1);
+                        padding: 10px 24px;
+                        border-radius: 100px;
+                        width: fit-content;
+                        font-weight: 300;
+
+                        &:not(:first-of-type) {
+                            margin-top: 10px;
+                        }
+
+                        &.teanin {
+                            background-color: $basic;
+                        }
+
+                        &.kofein {
+                            background-color: $font;
+                        }
+
+                        &.ketehin {
+                            background-color: $accent;
+                        }
+                    }
+
+                    p {
+                    }
+                }
+            }
+        }
+    }
+
+    .important {
+        h3 {
+            font-weight: 300;
+            @include adaptive-value("font-size", 20, 16, 1);
+            margin-bottom: 4px;
+        }
+
+        p {
+            @include adaptive-value("font-size", 24, 20, 1);
+        }
+    }
+}

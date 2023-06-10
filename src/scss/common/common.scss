@@ -54,7 +54,9 @@ main {
 }
 
 section {
-    @include adaptive-value("margin-bottom", 120, 80, 1);
+    &:not(:last-of-type) {
+        @include adaptive-value("margin-bottom", 120, 80, 1);
+    }
 }
 
 h1,
@@ -235,4 +237,12 @@ ol._marker {
             height: 0.8em;
         }
     }
+}
+
+table,
+thead,
+tbody,
+tr,
+td {
+    display: block;
 }

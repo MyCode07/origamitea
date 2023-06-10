@@ -6,9 +6,6 @@
     @include adaptive-value("margin-top", 120, 80, 1);
 
     @media (max-width: 768px) {
-        padding-top: 42px;
-        padding-bottom: 24px;
-
         * {
             text-align: center;
         }
@@ -70,7 +67,6 @@
             display: block;
             font-weight: 300;
             font-size: 18px;
-            
 
             @media (max-width: 768px) {
                 font-size: 14px;
@@ -177,7 +173,7 @@
         span {
             display: block;
             text-transform: uppercase;
-            
+
             margin-bottom: 16px;
             margin-top: 52px;
             text-align: right;
