@@ -23,6 +23,25 @@
         border-radius: 30px;
         padding-top: 55px;
         padding-bottom: 36px;
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    // .footer__bg
+
+    &__bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 345px;
+        transform: translate(-36%, 26%) rotate(-9deg);
+
+        @media (max-width: 1024px) {
+            width: 280px;
+            transform: translate(-60px, 35px) rotate(-21deg);
+        }
     }
 
     // .footer-inner__container

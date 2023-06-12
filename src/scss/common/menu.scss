@@ -7,7 +7,6 @@
     // .menu__body
 
     &__body {
-        
     }
 
     // .menu__close
@@ -60,7 +59,7 @@
                     }
                 }
 
-                &._active {
+                &[data-open] {
                     ul {
                         max-height: 100vh;
                     }
@@ -75,6 +74,8 @@
                     width: 18px;
                     stroke: currentColor;
                     cursor: pointer;
+                    pointer-events: none;
+
                     transition: all 0.3s ease 0s;
                 }
             }
