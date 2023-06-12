@@ -25,11 +25,21 @@ if (menuLinks.length) {
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
 
-    if (targetEl.classList.contains('menu') || targetEl.classList.contains('menu__close')) {
-        menu.classList.remove('_active');
+    if (targetEl.classList.contains('_side-fixed')) {
+        targetEl.classList.remove('_active');
         document.body.classList.remove('_noscroll');
     }
-    
+
+    if (targetEl.classList.contains('_side-fixed__close')) {
+        targetEl.closest('._side-fixed').classList.remove('_active');
+        document.body.classList.remove('_noscroll');
+    }
+
+    if (!targetEl.classList.contains('header__middle-catalog') && !targetEl.closest('.header__middle-catalog')) {
+        if (headerCatalog.classList.contains('_active')) {
+            headerCatalog.classList.remove('_active');
+        }
+    }
 })
 
 
@@ -51,9 +61,41 @@ if (mobileSubmenuList.length) {
 
             if (btn && isMobile.any()) {
                 btn.addEventListener('click', function () {
-                    li.classList.toggle('_active')
+                    toggleMenu(li)
                 })
             }
         }
+    })
+
+
+    function toggleMenu(item) {
+        const menu = item.closest('ul');
+        const menuItems = menu.querySelectorAll('li');
+
+        if (!item.hasAttribute('data-open')) {
+            const openitem = menu.querySelector('li[data-open]');
+            if (openitem) {
+                openitem.removeAttribute('data-open')
+            }
+
+            menuItems.forEach(item => {
+                item.removeAttribute('data-open')
+            })
+
+            item.setAttribute('data-open', 'open')
+        }
+        else {
+            item.removeAttribute('data-open')
+        }
+    }
+
+}
+
+
+const headerCatalogBtn = document.querySelector('.catalog-btn');
+const headerCatalog = document.querySelector('.header__middle-catalog');
+if (headerCatalogBtn && isMobile.any()) {
+    headerCatalogBtn.addEventListener('click', function () {
+        headerCatalog.classList.toggle('_active')
     })
 }

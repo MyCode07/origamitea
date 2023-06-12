@@ -26,6 +26,11 @@
                 @include adaptive-value("margin-right", 20, 10, 1);
             }
         }
+
+        img.logo {
+            @include adaptive-value("width", 145, 104, 1);
+            margin-bottom: 20px;
+        }
     }
 
     ol {

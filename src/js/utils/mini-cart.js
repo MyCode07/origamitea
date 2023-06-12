@@ -9,12 +9,3 @@ if (headerCart) {
         document.body.classList.add('_noscroll');
     })
 }
-
-document.addEventListener('click', function (e) {
-    let targetEl = e.target;
-
-    if (targetEl.classList.contains('mini-cart') || targetEl.classList.contains('mini-cart__close')) {
-        miniCart.classList.remove('_active');
-        document.body.classList.remove('_noscroll');
-    }
-})
