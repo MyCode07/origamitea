@@ -309,12 +309,36 @@ td {
         padding: 30px 15px;
     }
 
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+
+        ._side-fixed__close {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+
+            svg {
+                width: 1em;
+                height: 1em;
+                margin-right: 0.5em;
+            }
+        }
+    }
+
     // ._side-fixed__close
 
     &__close {
+        display: block;
+
         svg {
             pointer-events: none;
             stroke: $font;
+            width: 20px;
+            height: 20px;
         }
     }
 }

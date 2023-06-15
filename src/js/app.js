@@ -13,3 +13,4 @@ import './utils/sliders.js';
 import './utils/accordeon.js';
 import './utils/replace.js';
 import './utils/tabs.js';
+import './utils/sticky.js';

@@ -94,8 +94,16 @@ if (mobileSubmenuList.length) {
 
 const headerCatalogBtn = document.querySelector('.catalog-btn');
 const headerCatalog = document.querySelector('.header__middle-catalog');
+const mobielCatalog = document.querySelector('.catalog-dropdown');
 if (headerCatalogBtn && isMobile.any()) {
     headerCatalogBtn.addEventListener('click', function () {
-        headerCatalog.classList.toggle('_active')
+
+        if (window.innerHeight > 1024) {
+            headerCatalog.classList.toggle('_active')
+        }
+        else {
+            mobielCatalog.classList.add('_active');
+            document.body.classList.add('_noscroll');
+        }
     })
 }
