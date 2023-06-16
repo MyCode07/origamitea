@@ -1,5 +1,9 @@
 .wrapper {
     padding-bottom: 15px;
+
+    @media (max-width: 1024px) {
+        padding-bottom: 70px;
+    }
 }
 
 .footer {
