@@ -1,138 +1,67 @@
 .form {
-    // .form__rows
+    margin-top: 30px;
 
-    &__rows {
-        // .form__rows-item
+    & > :not(:last-child) {
+        margin-bottom: 20px;
+    }
 
-        &-item {
-        }
+    button,
+    input {
+        &:not([type="checkbox"]) {
+            @include adaptive-value("font-size", 16, 14, 1);
+            @include adaptive-value("height", 59, 55, 1);
+            font-weight: 300;
 
-        // .form__rows-content
-
-        &-content {
-            display: flex;
-            justify-content: space-between;
-
-            p {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                img {
-                }
-            }
-        }
-
-        &-left,
-        &-right {
-        }
-
-        // .form__rows-left
-
-        &-left {
-        }
-
-        // .form__rows-right
-
-        &-right {
+            border-radius: 100px;
+            width: 100%;
         }
     }
 
-    // .form__input
-
-    &__input {
-        // form__input-file
-
-        &-file {
-            border-bottom: unset;
-
-            .file-label {
-            }
-
-            .file-input {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-
-                // .file-input__body
-
-                &__body {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-
-                img {
-                }
-
-                input {
-                    display: none;
-                }
-
-                span {
-                    display: block;
-                }
-            }
+    input {
+        &:not([type="checkbox"]),
+        &:not([type="submit"]) {
+            padding: 0 15px 0 21px;
+            background-color: $gray;
+            color: $font;
         }
     }
 
-    // .form__radio
-
-    &__radio {
-        .form__input {
-            div {
-                display: flex;
-                justify-content: space-between;
-                position: relative;
-
-                input {
-                    height: 30px;
-                    width: 30px;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    opacity: 0;
-                    cursor: pointer;
-                    z-index: 5;
-
-                    &:checked + .checkmark {
-                        background-image: url("@img/svg/checked.svg");
-                    }
-                }
-
-                label {
-                }
-
-                .checkmark {
-                    position: relative;
-                    height: 30px;
-                    flex: 0 0 30px;
-                    width: 30px;
-                    background-color: unset;
-                    border: 1px solid #fff;
-                    border-radius: 5px;
-                    pointer-events: none;
-
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: contain;
-                }
-            }
-        }
+    button,
+    input[type="submit"] {
+        padding: 0 15px;
+        background-color: $accent;
+        color: $white;
+        display: block;
+        width: 100%;
     }
 
-    .answer {
-        position: absolute;
-        left: 0;
-        top: 0;
+    span {
+        display: flex;
 
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease 0s;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
 
-        &._active {
-            opacity: 1;
-            visibility: visible;
+        input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            flex: 0 0 auto;
+            border: 2px solid $gray;
+            cursor: pointer;
+        }
+
+        label {
+            font-weight: 300;
+            color: $font;
+            cursor: pointer;
+
+            @include adaptive-value("font-size", 14, 12, 1);
+
+            a {
+                color: $accent;
+                text-decoration: underline;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 @@include('catalog-dropdown.html')
 @@include('menu.html')
 @@include('mini-cart.html')
+@@include('account-sidebar.html')
 
 <div class="wrapper">
     <header class="header">
@@ -162,7 +163,7 @@
                     </div>
                     <div class="header__middle-right">
                         <div class="header-account">
-                            <a href="" class="header__middle-action">
+                            <a href="" class="header__middle-action" data-open-account>
                                 <div class="header__middle-action-img">
                                     <svg>
                                         <use xlink:href="@img/svg/icons.svg#account" />
@@ -170,6 +171,11 @@
                                 </div>
                                 <span>Профиль</span>
                             </a>
+                            <button>
+                                <svg viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.37427 1L5.18713 5.18713L1 1" stroke-linecap="square" />
+                                </svg>
+                            </button>
                             <ul>
                                 <li>
                                     <a href="">Панель управления</a>
@@ -202,7 +208,7 @@
                             </div>
                             <span>Избранное</span>
                         </a>
-                        <a href="" class="header__middle-action header-cart">
+                        <a href="" class="header__middle-action header-cart" data-open-cart>
                             <div class="header__middle-action-img">
                                 <svg>
                                     <use xlink:href="@img/svg/icons.svg#cart" />

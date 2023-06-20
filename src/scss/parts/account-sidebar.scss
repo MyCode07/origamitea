@@ -1,0 +1,68 @@
+.account-sidebar {
+    // .account-sidebar__container
+
+    &__container {
+    }
+
+    // .account-sidebar__body
+
+    &__body {
+    }
+
+    // .account-sidebar__top
+
+    &__top {
+        span {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 14px;
+        }
+    }
+
+    // .account-sidebar__close
+
+    &__close {
+    }
+
+    // .account-sidebar__reset
+
+    &__reset {
+        color: $accent;
+        font-size: 16px;
+        display: block;
+        text-align: center;
+    }
+
+    // .account-sidebar__bottom
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 10px 0 20px 0;
+    }
+
+    // .account-sidebar__register
+
+    &__register {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        margin-top: 60px;
+
+        font-size: 20px;
+
+        a {
+            color: $accent;
+        }
+
+        svg{
+            width: 100px;
+            fill: rgba($color: $accent, $alpha: 0.25);
+        }
+    }
+}

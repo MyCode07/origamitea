@@ -316,10 +316,18 @@ td {
         padding-bottom: 15px;
         margin-bottom: 15px;
 
+        span {
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
         ._side-fixed__close {
             display: flex;
             align-items: center;
             flex-direction: row-reverse;
+
+            text-transform: uppercase;
+            font-size: 14px;
 
             svg {
                 width: 1em;

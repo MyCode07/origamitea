@@ -132,56 +132,9 @@
 
         input {
             &:not([type="checkbox"]) {
-                @include adaptive-value("font-size", 16, 14, 1);
-                @include adaptive-value("height", 59, 55, 1);
-                font-weight: 300;
-
-                border-radius: 100px;
-
                 @media (max-width: 768px) {
                     width: 100%;
                     margin-bottom: 20px;
-                }
-            }
-        }
-
-        input[type="text"] {
-            padding: 0 15px 0 21px;
-            background-color: $gray;
-
-            color: $font;
-        }
-
-        input[type="submit"] {
-            padding: 0 15px;
-            background-color: $accent;
-            color: $white;
-        }
-
-        span {
-            display: flex;
-
-            @media (max-width:768px){
-                margin-bottom: 20px;
-            }
-
-            input[type="checkbox"] {
-                width: 16px;
-                height: 16px;
-                margin-right: 8px;
-                flex: 0 0 auto;
-                border: 2px solid $gray;
-            }
-
-            label {
-                font-weight: 300;
-                color: $font;
-
-                @include adaptive-value("font-size", 14, 12, 1);
-
-                a {
-                    color: $accent;
-                    text-decoration: underline;
                 }
             }
         }
